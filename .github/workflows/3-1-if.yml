@@ -1,0 +1,24 @@
+name: Dispatch workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_step:
+        description: Run conditional step
+        required: true
+        default: false
+        type: boolean
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job1
+        run: echo "job1"
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job2
+        if : ${{inputs.run_step}}
+        run: echo "conditional step"
