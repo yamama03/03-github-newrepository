@@ -3,10 +3,13 @@ name: Hello workflow
 on: push
 
 jobs:
-  hello:
+  job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Step1
-        run: echo "step1"
-      - name: Step2
-        run: echo "step2"
+      - name: Job1
+        run: echo "job1"
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job2
+        run: echo "job2"
