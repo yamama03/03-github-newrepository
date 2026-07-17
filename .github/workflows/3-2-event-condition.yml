@@ -1,4 +1,4 @@
-name: 3-2
+name: Dispatch
 on:
   workflow_dispatch:
   pull_request:
