@@ -1,0 +1,20 @@
+name: Dispatch workflow
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull Request
+        if: ${{ github.event_name == 'pull_request' }}
+        run: echo "run on pull_request"
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch
+        if : ${{ github.event_name == 'workflow_dispatch' }}
+        run: echo "run on workflow_dispatch" 
