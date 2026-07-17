@@ -6,13 +6,13 @@ on:
 
 
 jobs:
-  job1:
+  Pull Request:
     runs-on: ubuntu-latest
     steps:
       - name: Pull Request
         if: ${{github.event_name == 'pull_request'}}
         run: echo "run on pull_request"
-  job2:
+  Dispatch:
     runs-on: ubuntu-latest
     steps:
       - name: Dispatch
