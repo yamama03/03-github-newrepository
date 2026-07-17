@@ -6,7 +6,6 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
       - name: Job1
         run: echo "job1"
   job2:
@@ -14,14 +13,3 @@ jobs:
     steps:
       - name: Job2
         run: echo "job2"
-=======
-      - name: First job
-        run: echo "first job"
-
-  job2:
-    needs: job1
-    runs-on: ubuntu-latest
-    steps:
-      - name: Second job
-        run: echo "seconf job"
->>>>>>> 00a1500 (First Seconf Job)
