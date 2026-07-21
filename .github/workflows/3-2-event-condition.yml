@@ -1,4 +1,4 @@
-name: 3-2
+name: event-condition
 
 on:
   pull_request:
